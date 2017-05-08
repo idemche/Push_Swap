@@ -1,0 +1,15 @@
+int		ft_print_it(t_dlist *stack)
+{
+	t_node *elem;
+
+	elem = stack->head;
+	if (!elem)
+		return (1);
+	while (elem->next != NULL)
+	{
+		__builtin_printf("|%d|\n", (int)elem->value);
+		elem = elem->next;
+	}
+	__builtin_printf("|%d|\n\n", (int)elem->value);
+	return (1);
+}
