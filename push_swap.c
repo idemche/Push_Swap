@@ -6,7 +6,7 @@
 /*   By: idemchen <idemchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/20 17:27:16 by idemchen          #+#    #+#             */
-/*   Updated: 2017/05/06 22:41:57 by idemchen         ###   ########.fr       */
+/*   Updated: 2017/05/21 19:22:29 by idemchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,8 @@ int		main(int argc, char *argv[])
 	if (stacks.full_size == 1)
 		exit(write(1, "\033[0;31mOnly one element to chum:(\033[0m\n", 38));
 	ft_instant_check(&stacks);
-	ft_swap_or_push(&stacks, stacks.full_size);
+	(stacks.flags.a) ? ft_push_or_swap(&stacks, stacks.stack_a->head)
+	: ft_swap_or_push(&stacks, stacks.full_size);
 	(stacks.iterator > 0) ? ft_buffer_print(&stacks) :
 	write(1, "\033[0;32mStack is already sorted:)\033[0m\n", 37);
 	return (ft_allfree(&stacks));

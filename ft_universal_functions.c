@@ -6,7 +6,7 @@
 /*   By: idemchen <idemchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/04 01:49:50 by idemchen          #+#    #+#             */
-/*   Updated: 2017/05/06 22:22:22 by idemchen         ###   ########.fr       */
+/*   Updated: 2017/05/21 19:19:13 by idemchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,8 +79,7 @@ void			ft_represent(t_stack *stacks, int iter)
 
 void			ft_flag_searcher(t_stack *stacks, int argc, char **argv)
 {
-	stacks->flags.w = 0;
-	stacks->flags.s = 0;
+	stacks->flags = (t_flags){0, 0, 0, 0, 0};
 	while (argc-- > 0)
 	{
 		if (!STRCMP(argv[argc], "-w"))
@@ -89,5 +88,7 @@ void			ft_flag_searcher(t_stack *stacks, int argc, char **argv)
 			stacks->flags.s = 1;
 		else if (!STRCMP(argv[argc], "-c"))
 			stacks->flags.c = 1;
+		else if (!STRCMP(argv[argc], "-a"))
+			stacks->flags.a = 1;
 	}
 }
