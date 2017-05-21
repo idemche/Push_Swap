@@ -6,7 +6,7 @@
 /*   By: idemchen <idemchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/02/21 15:05:05 by idemchen          #+#    #+#             */
-/*   Updated: 2017/05/06 22:43:35 by idemchen         ###   ########.fr       */
+/*   Updated: 2017/05/21 19:15:42 by idemchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ typedef	struct	s_flags
 	int w : 3;
 	int s : 3;
 	int c : 3;
+	int a : 3;
 	int is_checker : 3;
 }				t_flags;
 
