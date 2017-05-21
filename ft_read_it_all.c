@@ -6,7 +6,7 @@
 /*   By: idemchen <idemchen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/05/06 01:10:22 by idemchen          #+#    #+#             */
-/*   Updated: 2017/05/21 19:16:23 by idemchen         ###   ########.fr       */
+/*   Updated: 2017/05/21 19:25:11 by idemchen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ static void	ft_search_and_fill(t_stack *stacks, int argc, char **argv)
 			|| (stacks->flags.w && !STRCMP(argv[argc], "-w"))
 			|| (stacks->flags.c && !STRCMP(argv[argc], "-c"))
 			|| (stacks->flags.a && !STRCMP(argv[argc], "-a")))
-			continue;
+			continue ;
 		ft_argument_hoover(stacks, argv[argc]);
 	}
 }
@@ -85,7 +85,7 @@ void		ft_apply_flags(t_stack *stacks, int argc, char **argv)
 			|| (stacks->flags.w && !STRCMP(argv[argc], "-w"))
 			|| (stacks->flags.c && !STRCMP(argv[argc], "-c"))
 			|| (stacks->flags.a && !STRCMP(argv[argc], "-a")))
-				continue;
+				continue ;
 			ft_read_from_file(stacks, argv[argc]);
 		}
 	else
