@@ -71,7 +71,7 @@ static void	ft_search_and_fill(t_stack *stacks, int argc, char **argv)
 			|| (stacks->flags.w && !STRCMP(argv[argc], "-w"))
 			|| (stacks->flags.c && !STRCMP(argv[argc], "-c"))
 			|| (stacks->flags.a && !STRCMP(argv[argc], "-a")))
-			continue ;
+			continue;
 		ft_argument_hoover(stacks, argv[argc]);
 	}
 }
