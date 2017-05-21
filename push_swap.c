@@ -33,7 +33,7 @@ int		main(int argc, char *argv[])
 	ft_createlists(&stacks);
 	if (argc < 1 || (!stacks.stack_a || !stacks.stack_b))
 		exit(write(2, "Error\n", 6));
-	else if (argc < 2)
+	else if (argc == 1)
 		return (write(1, "\033[0;31mNothing to sort\033[0m\n", 27));
 	ft_flag_searcher(&stacks, argc, argv);
 	ft_apply_flags(&stacks, argc, argv);
